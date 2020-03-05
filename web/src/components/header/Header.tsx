@@ -1,3 +1,4 @@
+import './Header.scss';
 import { Icon } from 'components';
 import React, { useContext } from 'react';
 import { SessionContext, SessionInterface } from 'app/context';

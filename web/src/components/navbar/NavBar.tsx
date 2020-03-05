@@ -1,5 +1,6 @@
-import React from 'react';
+import './NavBar.scss';
 import { Icon } from '..';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { NavBarProps, NavBarLink } from './';
 
