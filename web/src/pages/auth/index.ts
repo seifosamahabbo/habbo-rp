@@ -1,2 +1,2 @@
-import './Login';
-import './ForgotPassword';
+import './login';
+import './forgot-password';

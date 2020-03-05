@@ -1,40 +1,27 @@
-import React from 'react';
-import { setURL } from 'components';
+import './Login.scss';
+import React, { useContext } from 'react';
+import { setURL, Icon, Logo } from 'components';
+import { ConfigContext, ConfigInterface, HealthContext, HealthInterface } from 'app/context';
 
 setURL('login', <Login />);
 
 export function Login() {
+  const configContext: ConfigInterface = useContext(ConfigContext);
+  const healthContext: HealthInterface = useContext(HealthContext);
+
   return (
-    <div
-      className="text-center"
-      style={{
-        backgroundImage: 'url(/img/bg/front.png)',
-        backgroundPosition: 'no-repeat',
-        backgroundColor: '#f6f6f6',
-      }}
-    >
-      <div style={{ marginLeft: 10, width: 400 }}>
-        <form
-          className="form-signin"
-          style={{ maxWidth: 380 }}
-          action="/"
-          method="post"
-        >
-          <img
-            className="mb-4 rounded"
-            src="34101043_1918243188228000_599624069276499968_n.png"
-            alt=""
-            width="72"
-            height="72"
-          />
+    <div className="landing-page">
+      <div style={{ marginLeft: '10%', width: 400 }}>
+        <form className="form-signin">
+          <Logo className="mb-4"/>
           <div className="card">
             <div className="card-body">
               <p className="text-muted">
-                <i className="fad fa-users" />
-                &nbsp; 6 citizens online
+                <Icon type="users" />
+                { healthContext.onlineUsers } citizens online
               </p>
               <p>
-                Fabbo is a virtual world where you can live through realism.
+                { configContext.siteName } is a virtual world where you can live through realism.
               </p>
               <p>
                 <b>Now in Open Beta.</b>
@@ -57,8 +44,8 @@ export function Login() {
                     className="btn btn-lg btn-info btn-block"
                     type="button"
                   >
-                    <i className="fad fa-user-plus" />
-                    &nbsp; Register
+                    <Icon type="user-plus" />
+                    Register
                   </button>
                 </div>
                 <div className="col">
@@ -67,20 +54,15 @@ export function Login() {
                     type="submit"
                     name="adds"
                   >
-                    <i className="fad fa-sign-in" />
-                    &nbsp; Sign in
+                    <Icon type="sign-in" />
+                    Sign in
                   </button>
                 </div>
               </div>
-              <hr />
-              <a href="" className="btn btn-primary btn-block btn-lg">
-                <i className="fab fa-facebook-square" />
-                &nbsp;Log in with
-              </a>
             </div>
           </div>
           <p className="mt-2 mb-3 text-muted">
-            Fabbo is a not for profit educational project.
+            { configContext.siteName } is a not for profit educational project.
           </p>
         </form>
       </div>

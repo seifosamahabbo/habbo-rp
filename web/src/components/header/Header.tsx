@@ -1,9 +1,9 @@
 import { Icon } from 'components';
 import React, { useContext } from 'react';
-import { SessionContext, SessionContextState } from 'app/context';
+import { SessionContext, SessionInterface } from 'app/context';
 
 export function Header() {
-  const sessionContext: SessionContextState = useContext(SessionContext);
+  const sessionContext: SessionInterface = useContext(SessionContext);
   return (
     <div className="jumbotron jumbotron-fluid header">
       <div className="container">

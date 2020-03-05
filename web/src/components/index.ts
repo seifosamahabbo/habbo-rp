@@ -3,6 +3,7 @@ export * from './card';
 export * from './column';
 export * from './container';
 export * from './header';
+export * from './logo';
 export * from './icon';
 export * from './navbar';
 export * from './router';

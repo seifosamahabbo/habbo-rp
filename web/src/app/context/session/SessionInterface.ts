@@ -4,5 +4,5 @@ export interface SessionInterface {
   active: boolean;
   startedAt?: Date;
   user?: UserWire;
-  setStore: (changes: Partial<SessionContextState>) => void;
+  setStore: (changes: Partial<SessionInterface>) => void;
 }
