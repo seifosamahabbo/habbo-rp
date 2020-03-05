@@ -1,18 +1,12 @@
 import React, { PureComponent } from 'react';
-import { ConfigContext} from './ConfigContext';
-import { ConfigContextState } from './CreateInterface';
+import { ConfigContext, ConfigProviderProps, ConfigInterface } from './';
 
-export interface ConfigContextProviderProps {
-  children: any;
-}
-
-export class ConfigProvider extends PureComponent<ConfigContextProviderProps> {
-
-  setStore = (changes: Partial<ConfigContextState>): void => {
+export class ConfigProvider extends PureComponent<ConfigProviderProps> {
+  setStore = (changes: Partial<ConfigInterface>): void => {
     return this.setState(changes);
   };
 
-  state: ConfigContextState = {
+  state: ConfigInterface = {
     siteName: 'HabboRP',
     setStore: this.setStore,
   };
@@ -21,9 +15,8 @@ export class ConfigProvider extends PureComponent<ConfigContextProviderProps> {
     const { children } = this.props;
     return (
       <ConfigContext.Provider value={this.state}>
-        { children }
+        {children}
       </ConfigContext.Provider>
-    )
+    );
   }
-
 }

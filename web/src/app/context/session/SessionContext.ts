@@ -1,9 +1,9 @@
 import { createContext } from 'react';
-import { SessionContextState } from './SessionInterface';
+import { SessionInterface } from './';
 
-export const SessionContext = createContext<SessionContextState>({
+export const SessionContext = createContext<SessionInterface>({
   active: false,
   startedAt: undefined,
   user: undefined,
-  setStore: () => { },
+  setStore: () => {},
 });

@@ -6,7 +6,7 @@ import { ContextProviders } from './app/context';
 export function App() {
   return (
     <ContextProviders>
-      <Router/>
+      <Router />
     </ContextProviders>
   );
 }

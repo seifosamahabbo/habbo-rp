@@ -1,6 +1,6 @@
-import { UserWire } from 'interface/UserWire';
+import { UserWire } from 'app/interface/UserWire';
 
-export interface SessionContextState {
+export interface SessionInterface {
   active: boolean;
   startedAt?: Date;
   user?: UserWire;

@@ -1,18 +1,16 @@
 import React from 'react';
-import { ConfigProvider, SessionContextProvider } from './';
-
-export interface ContextProvidersProps {
-  children: any;
-}
+import {
+  ContextProvidersProps,
+  ConfigProvider,
+  SessionContextProvider,
+} from './index';
 
 export function ContextProviders({ children }: ContextProvidersProps) {
   return (
     <>
       <ConfigProvider>
-        <SessionContextProvider>
-          { children }
-        </SessionContextProvider>
+        <SessionContextProvider>{children}</SessionContextProvider>
       </ConfigProvider>
     </>
-  )
+  );
 }

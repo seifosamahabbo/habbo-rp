@@ -1,3 +1,5 @@
+import { Children } from '../common.type';
+
 export interface ColumnProps {
-  children: any;
+  children: Children;
 }

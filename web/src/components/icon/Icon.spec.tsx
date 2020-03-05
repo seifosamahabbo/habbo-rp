@@ -3,7 +3,6 @@ import { Icon, IconProps } from './';
 import { shallow, ShallowWrapper } from 'enzyme';
 
 describe('Icon', () => {
-
   const iconProps: IconProps = {
     type: 'test',
   };
@@ -19,9 +18,10 @@ describe('Icon', () => {
   });
 
   it('will use the given className', () => {
-    const otherIcon: ShallowWrapper = shallow(<Icon className="ml-2" {...iconProps} />);
+    const otherIcon: ShallowWrapper = shallow(
+      <Icon className="ml-2" {...iconProps} />
+    );
     expect(otherIcon.hasClass('ml-2')).toBeTruthy();
     expect(otherIcon.hasClass('mr-2')).not.toBeTruthy();
   });
-
 });

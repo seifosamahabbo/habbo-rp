@@ -1,23 +1,15 @@
 import React, { PureComponent } from 'react';
-import { SessionContext } from './SessionContext';
-import { SessionContextState } from './SessionInterface';
-import { exampleUserWire } from 'interface/UserWire';
+import { exampleUserWire } from 'app/interface/UserWire';
+import { SessionContext, SessionInterface, SessionProviderProps } from './';
 
-export interface SessionContextProviderProps {
-  children: any;
-}
-
-export class SessionContextProvider extends PureComponent<SessionContextProviderProps> {
-
-  setStore = (changes: Partial<SessionContextState>): void => {
+export class SessionContextProvider extends PureComponent<
+  SessionProviderProps
+> {
+  setStore = (changes: Partial<SessionInterface>): void => {
     return this.setState(changes);
   };
 
-  getStore = (): SessionContextState => {
-    return this.state;
-  };
-
-  state: SessionContextState = {
+  state: SessionInterface = {
     active: false,
     startedAt: undefined,
     user: exampleUserWire,
@@ -28,10 +20,8 @@ export class SessionContextProvider extends PureComponent<SessionContextProvider
     const { children } = this.props;
     return (
       <SessionContext.Provider value={this.state}>
-        { children }
+        {children}
       </SessionContext.Provider>
-    )
+    );
   }
-
-
 }

@@ -3,8 +3,7 @@ import { Header } from './';
 import { shallow, ShallowWrapper } from 'enzyme';
 
 describe('Header', () => {
-
-  const header: ShallowWrapper = shallow(<Header/>);
+  const header: ShallowWrapper = shallow(<Header />);
 
   it('will have a header div', () => {
     expect(header.hasClass('header')).toBeTruthy();
@@ -21,5 +20,4 @@ describe('Header', () => {
   it('will display the current users bank balance', () => {
     fail();
   });
-
 });

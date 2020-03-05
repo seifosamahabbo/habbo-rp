@@ -3,7 +3,6 @@ import { Button, ButtonProps } from './';
 import { shallow, ShallowWrapper } from 'enzyme';
 
 describe('Button', () => {
-
   const mockOnClick = jest.fn();
   const mockChildren = <span>Button Test</span>;
 
@@ -13,12 +12,14 @@ describe('Button', () => {
   };
 
   it('will default to the light button', () => {
-    const button: ShallowWrapper = shallow(<Button {...buttonProps }/>);
+    const button: ShallowWrapper = shallow(<Button {...buttonProps} />);
     expect(button.hasClass('btn-light')).toBeTruthy();
   });
 
   it('will update the button color to the specified one if given', () => {
-    const button: ShallowWrapper = shallow(<Button color="dark" {...buttonProps } />);
+    const button: ShallowWrapper = shallow(
+      <Button color="dark" {...buttonProps} />
+    );
     expect(button.hasClass('btn-dark')).toBeTruthy();
     expect(button.hasClass('btn-light')).not.toBeTruthy();
   });
@@ -33,5 +34,4 @@ describe('Button', () => {
     const button: ShallowWrapper = shallow(<Button {...buttonProps} />);
     expect(button.contains(buttonProps.children)).toBeTruthy();
   });
-
 });

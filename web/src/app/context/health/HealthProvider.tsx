@@ -1,12 +1,7 @@
 import React, { PureComponent } from 'react';
-import { HealthContext, HealthInterface } from './';
-
-export interface HealthProviderProps {
-  children: any;
-}
+import { HealthContext, HealthInterface, HealthProviderProps } from './index';
 
 export class HealthProvider extends PureComponent<HealthProviderProps> {
-
   setStore = (changes: Partial<HealthInterface>): void => {
     return this.setState(changes);
   };
@@ -21,9 +16,8 @@ export class HealthProvider extends PureComponent<HealthProviderProps> {
     const { children } = this.props;
     return (
       <HealthContext.Provider value={this.state}>
-        { children }
+        {children}
       </HealthContext.Provider>
-    )
+    );
   }
-
 }

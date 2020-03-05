@@ -1,9 +1,9 @@
-import { BackgroundColor, PrimaryColor } from '../common.type';
+import { BackgroundColor, Children, PrimaryColor } from '../common.type';
 
 export interface CardProps {
   bg?: BackgroundColor;
   color?: PrimaryColor;
   className?: string;
-  header?: any;
-  children: any;
+  header?: Children;
+  children: Children;
 }

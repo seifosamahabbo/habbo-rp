@@ -1,7 +1,7 @@
 import { createContext } from 'react';
-import { ConfigContextState } from './CreateInterface';
+import { ConfigInterface } from './ConfigInterface';
 
-export const ConfigContext = createContext<ConfigContextState>({
+export const ConfigContext = createContext<ConfigInterface>({
   siteName: 'HabboRP',
-  setStore: () => { },
+  setStore: () => {},
 });
