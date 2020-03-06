@@ -1,8 +1,5 @@
-import { UserWire } from 'app/interface/UserWire';
+import { UserSession } from 'app/interface';
 
-export interface SessionInterface {
-  active: boolean;
-  startedAt?: Date;
-  user?: UserWire;
+export interface SessionInterface extends UserSession {
   setStore: (changes: Partial<SessionInterface>) => void;
 }

@@ -1,5 +1,13 @@
 import React from 'react';
-import { Container, Card, Row, Column, Header, setURL, NavBar } from 'components';
+import {
+  Container,
+  Card,
+  Row,
+  Column,
+  Header,
+  setURL,
+  NavBar,
+} from 'components';
 
 setURL('home', <Home />);
 

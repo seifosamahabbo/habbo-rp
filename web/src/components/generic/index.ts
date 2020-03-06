@@ -4,4 +4,7 @@ export * from './column';
 export * from './container';
 export * from './logo';
 export * from './icon';
+export * from './label';
+export * from './input';
 export * from './row';
+export * from './typography';

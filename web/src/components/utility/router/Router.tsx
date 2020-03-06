@@ -1,6 +1,9 @@
-import { RouteProps } from 'react-router';
 import React, { ReactNode } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { RouteProps } from 'react-router';
+import { createBrowserHistory, History } from 'history';
+import { Switch, Route, Router as BrowserRouter } from 'react-router-dom';
+
+const routerHistory: History = createBrowserHistory();
 
 const routes: RouteProps[] = [];
 
@@ -8,7 +11,7 @@ let notFoundRoute: ReactNode | undefined;
 
 export function Router() {
   return (
-    <BrowserRouter>
+    <BrowserRouter history={routerHistory}>
       <Switch>
         {routes.map((route: RouteProps, index: number) => (
           <Route key={index} {...route} />
@@ -28,4 +31,8 @@ export function setURL(url: string, component: ReactNode): void {
 
 export function set404(component: ReactNode): void {
   notFoundRoute = component;
+}
+
+export function redirect(path: string): void {
+  routerHistory.push(`/${path}`);
 }

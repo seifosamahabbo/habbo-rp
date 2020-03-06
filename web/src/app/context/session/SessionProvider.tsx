@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { exampleUserWire } from 'app/interface/UserWire';
+import { exampleUser } from 'app/interface';
 import { SessionContext, SessionInterface, SessionProviderProps } from './';
 
 export class SessionContextProvider extends PureComponent<
@@ -10,9 +10,8 @@ export class SessionContextProvider extends PureComponent<
   };
 
   state: SessionInterface = {
-    active: false,
     startedAt: undefined,
-    user: exampleUserWire,
+    user: exampleUser,
     setStore: this.setStore,
   };
 
