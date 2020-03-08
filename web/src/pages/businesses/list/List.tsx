@@ -1,12 +1,16 @@
 import React from 'react';
-import { setURL, UserLayout } from 'components';
+import { Column, JobCentreCard, setURL, Row, UserLayout } from 'components';
 
 setURL('businesses', <List />);
 
 export function List() {
   return (
     <UserLayout>
-      <p>Business List</p>
+      <Row>
+        <Column size={8}>
+          <JobCentreCard/>
+        </Column>
+      </Row>
     </UserLayout>
   )
 }
