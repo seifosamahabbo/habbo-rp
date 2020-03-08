@@ -8,5 +8,5 @@ export function Jobs() {
     <UserLayout>
       <p>Business Jobs</p>
     </UserLayout>
-  )
+  );
 }

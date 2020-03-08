@@ -13,10 +13,6 @@ export class ConfigProvider extends PureComponent<ConfigProviderProps> {
 
   render() {
     const { children } = this.props;
-    return (
-      <ConfigContext.Provider value={this.state}>
-        {children}
-      </ConfigContext.Provider>
-    );
+    return <ConfigContext.Provider value={this.state}>{children}</ConfigContext.Provider>;
   }
 }

@@ -12,5 +12,4 @@ export const exampleUser: User = {
   bankBalance: 0,
 };
 
-
 export const exampleBearerToken = 'Bearer 123';

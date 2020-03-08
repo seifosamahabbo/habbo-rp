@@ -8,7 +8,8 @@ import {
   MyJobCard,
   AboutBusinessCard,
   OpenBetaCard,
-  SearchForBusinessCard, CreateABusinessCard
+  SearchForBusinessCard,
+  CreateABusinessCard,
 } from 'components';
 
 setURL('businesses', <List />);
@@ -18,16 +19,16 @@ export function List() {
     <UserLayout>
       <Row>
         <Column size={8}>
-          <JobCentreCard/>
-          <SearchForBusinessCard/>
-          <CreateABusinessCard/>
+          <JobCentreCard />
+          <SearchForBusinessCard />
+          <CreateABusinessCard />
         </Column>
         <Column size={4}>
-          <MyJobCard/>
-          <AboutBusinessCard/>
-          <OpenBetaCard/>
+          <MyJobCard />
+          <AboutBusinessCard />
+          <OpenBetaCard />
         </Column>
       </Row>
     </UserLayout>
-  )
+  );
 }

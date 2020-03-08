@@ -8,4 +8,4 @@ export * from './info-card';
 export * from './navbar';
 export * from './open-beta-card';
 export * from './search-for-business-card';
-export * from './server-status-card'
+export * from './server-status-card';

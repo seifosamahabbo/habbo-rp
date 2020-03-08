@@ -1,4 +1,4 @@
-import {User, UserSession} from 'app/interface';
+import { User, UserSession } from 'app/interface';
 
 export interface SessionInterface extends UserSession {
   setStore: (changes: Partial<SessionInterface>) => void;

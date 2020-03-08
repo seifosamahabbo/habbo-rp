@@ -7,14 +7,15 @@ export function OpenBetaCard() {
   return (
     <Card header="Open Beta" icon="tools">
       <p className="card-text">
-        { configContext.siteName } is currently in a open beta state. This means that the game is nearly
-        complete to play but bugs may occur.
+        {configContext.siteName} is currently in a open beta state. This means that the game is nearly complete to play
+        but bugs may occur.
       </p>
       <p className="card-text">
         <a href="/beta" className="btn btn-warning">
-          <Icon type="tools"/>
-          View more »</a>
+          <Icon type="tools" />
+          View more »
+        </a>
       </p>
     </Card>
-  )
+  );
 }

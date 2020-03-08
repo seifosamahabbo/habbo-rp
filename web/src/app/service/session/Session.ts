@@ -1,12 +1,11 @@
 import { SessionInterface } from './';
 import { localStorageService } from 'app/service';
-import {exampleBearerToken, exampleUser, User} from 'app/interface';
+import { exampleBearerToken, exampleUser, User } from 'app/interface';
 
 class SessionService implements SessionInterface {
-
   readonly localStorageKey = 'session';
 
-  async init(): Promise<User|undefined> {
+  async init(): Promise<User | undefined> {
     try {
       const authToken: string = localStorageService.get(this.localStorageKey);
       return await this.attemptBearerToken(authToken);
@@ -35,7 +34,6 @@ class SessionService implements SessionInterface {
   logout(): void {
     localStorageService.delete(this.localStorageKey);
   }
-
 }
 
 export const sessionService: SessionInterface = new SessionService();

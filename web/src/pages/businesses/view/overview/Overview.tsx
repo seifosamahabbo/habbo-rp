@@ -8,5 +8,5 @@ export function Overview() {
     <UserLayout>
       <p>Business Overview</p>
     </UserLayout>
-  )
+  );
 }

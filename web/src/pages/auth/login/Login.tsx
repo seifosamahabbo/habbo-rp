@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  AuthLayout,
-  setURL,
-  redirect,
-  Input,
-  Label,
-  Typography,
-  Row,
-} from 'components';
+import { AuthLayout, setURL, redirect, Input, Label, Typography, Row } from 'components';
 
 setURL('login', <Login />);
 

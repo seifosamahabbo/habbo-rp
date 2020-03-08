@@ -8,16 +8,12 @@ describe('Container', () => {
   };
 
   it('will have a container div', () => {
-    const container: ShallowWrapper = shallow(
-      <Container {...containerProps} />
-    );
+    const container: ShallowWrapper = shallow(<Container {...containerProps} />);
     expect(container.hasClass('container')).toBeTruthy();
   });
 
   it('will render the given children', () => {
-    const container: ShallowWrapper = shallow(
-      <Container {...containerProps} />
-    );
+    const container: ShallowWrapper = shallow(<Container {...containerProps} />);
     expect(container.contains(containerProps.children)).toBeTruthy();
   });
 });

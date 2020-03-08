@@ -1,5 +1,3 @@
 import { Children } from 'components';
 
-export interface TableProps {
-
-}
+export interface TableProps {}

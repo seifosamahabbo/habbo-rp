@@ -17,9 +17,7 @@ describe('Button', () => {
   });
 
   it('will update the button color to the specified one if given', () => {
-    const button: ShallowWrapper = shallow(
-      <Button color="dark" {...buttonProps} />
-    );
+    const button: ShallowWrapper = shallow(<Button color="dark" {...buttonProps} />);
     expect(button.hasClass('btn-dark')).toBeTruthy();
     expect(button.hasClass('btn-light')).not.toBeTruthy();
   });

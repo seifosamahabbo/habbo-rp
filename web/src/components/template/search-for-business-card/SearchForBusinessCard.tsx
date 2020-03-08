@@ -5,9 +5,9 @@ export function SearchForBusinessCard() {
   return (
     <Card header="Search For Business">
       <Form>
-        <Input type="text" placeholder="Business Name"/>
+        <Input type="text" placeholder="Business Name" />
       </Form>
-      <Table/>
+      <Table />
     </Card>
-  )
+  );
 }

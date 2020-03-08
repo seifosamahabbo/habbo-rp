@@ -14,10 +14,6 @@ export class HealthProvider extends PureComponent<HealthProviderProps> {
 
   render() {
     const { children } = this.props;
-    return (
-      <HealthContext.Provider value={this.state}>
-        {children}
-      </HealthContext.Provider>
-    );
+    return <HealthContext.Provider value={this.state}>{children}</HealthContext.Provider>;
   }
 }

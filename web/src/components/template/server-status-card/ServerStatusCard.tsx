@@ -10,5 +10,5 @@ export function ServerStatusCard() {
         <li>Checked in: 08/03/20 03:17:00</li>
       </ul>
     </Card>
-  )
+  );
 }

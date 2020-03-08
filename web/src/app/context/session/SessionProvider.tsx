@@ -1,10 +1,9 @@
-import {exampleUser, User} from 'app/interface';
+import { exampleUser, User } from 'app/interface';
 import React, { PureComponent } from 'react';
 import { sessionService } from 'app/service';
 import { SessionContext, SessionInterface, SessionProviderProps } from './';
 
 export class SessionContextProvider extends PureComponent<SessionProviderProps> {
-
   setStore = (changes: Partial<SessionInterface>): void => {
     return this.setState(changes);
   };
@@ -14,7 +13,7 @@ export class SessionContextProvider extends PureComponent<SessionProviderProps> 
   }
 
   async init(): Promise<void> {
-    const user: User|undefined = await sessionService.init();
+    const user: User | undefined = await sessionService.init();
 
     if (user) {
       this.initSession(user);
@@ -53,10 +52,6 @@ export class SessionContextProvider extends PureComponent<SessionProviderProps> 
 
   render() {
     const { children } = this.props;
-    return (
-      <SessionContext.Provider value={this.state}>
-        {children}
-      </SessionContext.Provider>
-    );
+    return <SessionContext.Provider value={this.state}>{children}</SessionContext.Provider>;
   }
 }

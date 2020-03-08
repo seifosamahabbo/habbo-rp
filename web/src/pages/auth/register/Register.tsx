@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  AuthLayout,
-  setURL,
-  redirect,
-  Input,
-  Label,
-  Row,
-  Typography,
-} from 'components';
+import { AuthLayout, setURL, redirect, Input, Label, Row, Typography } from 'components';
 
 setURL('register', <Register />);
 

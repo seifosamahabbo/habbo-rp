@@ -12,13 +12,11 @@ export function UserLayout({ children }: UserLayoutProps) {
 
   return (
     <>
-      <Header/>
-      <NavBar/>
+      <Header />
+      <NavBar />
       <main>
-        <Container>
-          { children }
-        </Container>
+        <Container>{children}</Container>
       </main>
     </>
-  )
+  );
 }
