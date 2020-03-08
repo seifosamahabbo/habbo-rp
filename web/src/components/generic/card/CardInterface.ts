@@ -6,4 +6,5 @@ export interface CardProps {
   className?: string;
   header?: Children;
   children: Children;
+  icon?: string;
 }

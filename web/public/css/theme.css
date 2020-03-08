@@ -4,8 +4,9 @@ html, body, #root {
 }
 
 .bug-testing-card {
-    height:200px;
-    background-color:#388229 !important;
-    background-image:url('../img/card/bugs.png');
-    background-repeat:no-repeat
+    background-color: #388229;
+}
+
+.card {
+    margin-bottom: 2.5%;
 }

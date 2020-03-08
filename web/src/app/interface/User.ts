@@ -7,7 +7,7 @@ export interface User {
 
 export const exampleUser: User = {
   id: 1,
-  username: 'Test-UserLayout',
+  username: 'Le-Chris',
   purseBalance: 0,
   bankBalance: 0,
 };
