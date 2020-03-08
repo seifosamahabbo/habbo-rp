@@ -7,4 +7,5 @@ export * from './icon';
 export * from './label';
 export * from './input';
 export * from './row';
+export * from './table';
 export * from './typography';
