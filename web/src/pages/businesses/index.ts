@@ -1,2 +1,2 @@
-import './list';
 import './view';
+import './list';

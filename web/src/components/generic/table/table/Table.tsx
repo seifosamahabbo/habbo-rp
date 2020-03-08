@@ -2,6 +2,7 @@ import './Table.scss';
 import React from 'react';
 import { TableProps } from './';
 import { Icon } from 'components';
+import { Link } from 'react-router-dom';
 import { TableBody, TableDataCell, TableHead, TableHeader, TableRow } from '../';
 
 export function Table({ }: TableProps) {
@@ -34,9 +35,9 @@ export function Table({ }: TableProps) {
           $11
         </TableDataCell>
         <TableDataCell>
-          <a href="/business/position/6ed7a20d-8062-4a13-98c4-57be8703f8af" className="btn btn-info btn-sm">
-            <Icon type="fa-info-circle"/>
-          </a>
+          <Link to="/businesses/1" className="btn btn-info btn-sm">
+            <Icon className="" type="info-circle"/>
+          </Link>
         </TableDataCell>
       </TableBody>
     </table>
