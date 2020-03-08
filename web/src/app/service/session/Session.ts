@@ -1,28 +1,41 @@
 import { SessionInterface } from './';
 import { localStorageService } from 'app/service';
-import { exampleUser, UserSession } from 'app/interface';
+import {exampleBearerToken, exampleUser, User} from 'app/interface';
 
 class SessionService implements SessionInterface {
+
   readonly localStorageKey = 'session';
 
-  async start(): Promise<void> {
+  async init(): Promise<User|undefined> {
     try {
       const authToken: string = localStorageService.get(this.localStorageKey);
+      return await this.attemptBearerToken(authToken);
     } catch {
-      this.logout();
+      return undefined;
     }
   }
 
-  async login(username: string, password: string): Promise<UserSession> {
-    return {
-      user: exampleUser,
-      startedAt: new Date(),
-    };
+  async attemptCredentials(username: string, password: string): Promise<string> {
+    if (username !== exampleUser.username || password !== 'password') {
+      throw new Error('Invalid credentials');
+    }
+
+    return exampleBearerToken;
   }
 
-  async logout(): Promise<void> {
+  async attemptBearerToken(authToken: string): Promise<User> {
+    if (authToken !== exampleBearerToken) {
+      throw new Error('Invalid token');
+    }
+
+    localStorageService.set(this.localStorageKey, exampleBearerToken);
+    return exampleUser;
+  }
+
+  logout(): void {
     localStorageService.delete(this.localStorageKey);
   }
+
 }
 
 export const sessionService: SessionInterface = new SessionService();

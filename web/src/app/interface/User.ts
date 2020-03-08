@@ -7,7 +7,10 @@ export interface User {
 
 export const exampleUser: User = {
   id: 1,
-  username: 'Test-User',
+  username: 'Test-UserLayout',
   purseBalance: 0,
   bankBalance: 0,
 };
+
+
+export const exampleBearerToken = 'Bearer 123';

@@ -7,13 +7,14 @@ import {
   Header,
   setURL,
   NavBar,
+  UserLayout,
 } from 'components';
 
 setURL('home', <Home />);
 
 export function Home() {
   return (
-    <>
+    <UserLayout>
       <Header />
       <NavBar />
       <main>
@@ -27,6 +28,6 @@ export function Home() {
           </Row>
         </Container>
       </main>
-    </>
+    </UserLayout>
   );
 }

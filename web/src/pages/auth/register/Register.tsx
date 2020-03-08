@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Auth,
+  AuthLayout,
   setURL,
   redirect,
   Input,
@@ -19,7 +19,7 @@ export function Register() {
   function onRegister(): void {}
 
   return (
-    <Auth onLogin={onLogin} onRegister={onRegister} onSubmit={onRegister}>
+    <AuthLayout onLogin={onLogin} onRegister={onRegister} onSubmit={onRegister}>
       <Row>
         <Typography type="h6">Create A New Account</Typography>
       </Row>
@@ -35,6 +35,6 @@ export function Register() {
         <Label>Password Again</Label>
         <Input type="password" placeholder="Password Again" />
       </Row>
-    </Auth>
+    </AuthLayout>
   );
 }

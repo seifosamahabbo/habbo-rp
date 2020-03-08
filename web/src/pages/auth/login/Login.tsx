@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Auth,
+  AuthLayout,
   setURL,
   redirect,
   Input,
@@ -21,7 +21,7 @@ export function Login() {
   }
 
   return (
-    <Auth onRegister={onRegister} onSubmit={onLogin} onLogin={onLogin}>
+    <AuthLayout onRegister={onRegister} onSubmit={onLogin} onLogin={onLogin}>
       <Row>
         <Typography type="h6">Login</Typography>
       </Row>
@@ -33,6 +33,6 @@ export function Login() {
         <Label>Password</Label>
         <Input type="password" placeholder="Password" />
       </Row>
-    </Auth>
+    </AuthLayout>
   );
 }
