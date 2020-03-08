@@ -15,8 +15,8 @@ export function Auth({ children, onLogin, onRegister, onSubmit }: AuthProps) {
 
   return (
     <div className="landing-page">
-      <div style={{ marginLeft: '10%', width: 400 }}>
-        <form className="form-signin" onSubmit={onSubmit}>
+      <div className="form-signin">
+        <form onSubmit={onSubmit}>
           <Logo className="mb-4" />
           <div className="card">
             <div className="card-body">
@@ -32,9 +32,9 @@ export function Auth({ children, onLogin, onRegister, onSubmit }: AuthProps) {
               <div className="form-row">
                 <div className="col">
                   <button
-                    className="btn btn-lg btn-info btn-block"
-                    type="button"
-                    onClick={onRegister}
+                      className="btn btn-lg btn-info btn-block"
+                      type="button"
+                      onClick={onRegister}
                   >
                     <Icon type="user-plus" />
                     Register
@@ -42,9 +42,9 @@ export function Auth({ children, onLogin, onRegister, onSubmit }: AuthProps) {
                 </div>
                 <div className="col">
                   <button
-                    className="btn btn-lg btn-success btn-block"
-                    type="button"
-                    onClick={onLogin}
+                      className="btn btn-lg btn-success btn-block"
+                      type="button"
+                      onClick={onLogin}
                   >
                     <Icon type="sign-in" />
                     Sign in
@@ -55,7 +55,7 @@ export function Auth({ children, onLogin, onRegister, onSubmit }: AuthProps) {
           </div>
         </form>
         <p className="mt-2 mb-3 text-muted">
-          {configContext.siteName} is a not for profit educational project.
+          { configContext.siteName } is a not for profit educational platform.
         </p>
       </div>
     </div>
