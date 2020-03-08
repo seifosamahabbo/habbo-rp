@@ -11,7 +11,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "gts clean && gts check && tsc -p . && react-scripts test",
+    "test": "gts clean && gts check && tsc -p . && react-scripts test --coverage",
     "fix": "gts clean && gts fix"
   },
   "eslintConfig": {
