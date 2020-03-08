@@ -1,8 +1,12 @@
 import React from 'react';
-import { setURL } from 'components';
+import { setURL, UserLayout } from 'components';
 
 setURL('businesses', <List />);
 
 export function List() {
-  return <p>Businesses</p>;
+  return (
+    <UserLayout>
+      <p>Business List</p>
+    </UserLayout>
+  )
 }

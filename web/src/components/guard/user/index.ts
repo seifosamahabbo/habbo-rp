@@ -1,2 +1,2 @@
-export * from './Guest';
-export * from './GuestInterface';
+export * from './UserGuard';
+export * from './UserGuardInterface';

@@ -1,8 +1,12 @@
 import React from 'react';
-import { setURL } from 'components';
+import { setURL, UserLayout } from 'components';
 
 setURL('businesses/:id', <Overview />);
 
 export function Overview() {
-  return <p>Businesses Landing</p>;
+  return (
+    <UserLayout>
+      <p>Business Overview</p>
+    </UserLayout>
+  )
 }
