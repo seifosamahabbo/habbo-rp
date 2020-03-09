@@ -49,6 +49,9 @@
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
+    "testMatch": [
+      "**/?(*.)+(spec|test|e2e).[tj]s?(x)"
+    ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
   }
