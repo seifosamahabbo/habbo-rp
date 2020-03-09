@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { ConfigContext, ConfigInterface } from 'app/context';
 import { Card, Column, Row, setURL, UserLayout, Icon } from 'components';
 
-setURL('life', <Life/>);
+setURL('life', <Life />);
 
 export function Life() {
   const configContext: ConfigInterface = useContext(ConfigContext);
@@ -15,7 +15,7 @@ export function Life() {
             <p className="card-text">Are you unemployed? Check out the list of available jobs by clicking below.</p>
             <p className="card-text">
               <Link className="btn btn-light" to="/business">
-                <Icon type="briefcase"/>
+                <Icon type="briefcase" />
                 View the list
               </Link>
             </p>
@@ -28,7 +28,7 @@ export function Life() {
             </p>
             <p className="card-text">
               <Link className="btn btn-light" to="properties">
-                <Icon type="home"/>
+                <Icon type="home" />
                 View the list
               </Link>
             </p>
@@ -38,11 +38,12 @@ export function Life() {
       <Row>
         <Column size={6}>
           <Card bg="info" color="white" header="Law and Order">
-            <p className="card-text">Do you want more information about the laws of { configContext.siteName }? Check out the list
-              below.</p>
+            <p className="card-text">
+              Do you want more information about the laws of {configContext.siteName}? Check out the list below.
+            </p>
             <p className="card-text">
               <Link className="btn btn-light" to="/life/law-and-order">
-                <Icon type="balance-scale"/>
+                <Icon type="balance-scale" />
                 View
               </Link>
             </p>
@@ -50,11 +51,12 @@ export function Life() {
         </Column>
         <Column size={6}>
           <Card bg="danger" color="white" header="Banking & Finance">
-            <p className="card-text">Do you want more information about your finances? Check out your own personal
-              dashboard below.</p>
+            <p className="card-text">
+              Do you want more information about your finances? Check out your own personal dashboard below.
+            </p>
             <p className="card-text">
               <Link className="btn btn-light" to="/life/banking-and-finance">
-                <Icon type="chart-pie"/>
+                <Icon type="chart-pie" />
                 View
               </Link>
             </p>
@@ -62,5 +64,5 @@ export function Life() {
         </Column>
       </Row>
     </UserLayout>
-  )
+  );
 }
