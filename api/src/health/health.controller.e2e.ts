@@ -23,7 +23,7 @@ describe('HealthController ', () => {
       const response: any = await supertest(httpServer).get('/health');
 
       expect(response.status).toEqual(HttpStatus.OK);
-      expect(response.body).toEqual('Healthy');
+      expect(response.text).toEqual('Healthy');
     });
   });
 });
