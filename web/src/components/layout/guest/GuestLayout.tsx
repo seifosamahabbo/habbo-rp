@@ -1,10 +1,10 @@
-import './AuthLayout.scss';
-import { AuthLayoutProps } from './';
+import './GuestLayout.scss';
+import { GuestLayoutProps } from './';
 import React, { useContext } from 'react';
 import { Logo, Icon, GuestGuard } from 'components';
 import { ConfigContext, ConfigInterface, HealthContext, HealthInterface } from 'app/context';
 
-export function AuthLayout({ children, onLogin, onRegister, onSubmit }: AuthLayoutProps) {
+export function GuestLayout({ children, onLogin, onRegister, onSubmit }: GuestLayoutProps) {
   const configContext: ConfigInterface = useContext(ConfigContext);
   const healthContext: HealthInterface = useContext(HealthContext);
 

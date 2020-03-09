@@ -6,6 +6,7 @@
     ]
   },
   "rules": {
-    "variable-name": false
+    "variable-name": false,
+    "no-any": false
   }
 }

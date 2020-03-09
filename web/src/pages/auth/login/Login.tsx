@@ -1,5 +1,5 @@
 import React from 'react';
-import { AuthLayout, setURL, redirect, Input, Label, Typography, Row } from 'components';
+import { GuestLayout, setURL, redirect, Input, Label, Typography, Row } from 'components';
 
 setURL('login', <Login />);
 
@@ -13,7 +13,7 @@ export function Login() {
   }
 
   return (
-    <AuthLayout onRegister={onRegister} onSubmit={onLogin} onLogin={onLogin}>
+    <GuestLayout onRegister={onRegister} onSubmit={onLogin} onLogin={onLogin}>
       <Row>
         <Typography type="h6">Login</Typography>
       </Row>
@@ -25,6 +25,6 @@ export function Login() {
         <Label>Password</Label>
         <Input type="password" placeholder="Password" />
       </Row>
-    </AuthLayout>
+    </GuestLayout>
   );
 }

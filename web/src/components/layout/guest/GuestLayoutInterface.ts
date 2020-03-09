@@ -1,6 +1,6 @@
-import { Children } from 'components/common.type';
+import { Children } from 'components';
 
-export interface AuthLayoutProps {
+export interface GuestLayoutProps {
   children: Children;
   onLogin?: () => void;
   onRegister?: () => void;

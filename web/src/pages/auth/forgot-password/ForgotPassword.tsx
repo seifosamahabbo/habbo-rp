@@ -1,8 +1,12 @@
 import React from 'react';
-import { setURL } from 'components';
+import { GuestLayout, setURL } from 'components';
 
 setURL('forgot-password', <ForgotPassword />);
 
 export function ForgotPassword() {
-  return <p>Forgot Password?</p>;
+  return (
+    <GuestLayout>
+      <p>Forgot Password?</p>
+    </GuestLayout>
+  );
 }
